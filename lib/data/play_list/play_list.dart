@@ -37,6 +37,14 @@ class PlayList {
           title: 'النساء',
         ),
       ),
+      AudioSource.uri(
+        Uri.parse('https://server6.mp3quran.net/s_bud/114.mp3'),
+        tag: MediaItem(
+          id: '114',
+          artUri: Uri.parse(MyText.qareeImg),
+          title: 'الناس',
+        ),
+      ),
     ],
   );
 }
