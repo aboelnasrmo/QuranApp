@@ -4,6 +4,8 @@ import 'package:quranapp/core/constant/my_text.dart';
 
 class PlayList {
   static final playList = ConcatenatingAudioSource(
+    useLazyPreparation: true,
+    shuffleOrder: DefaultShuffleOrder(),
     children: [
       AudioSource.uri(
         Uri.parse('https://server6.mp3quran.net/s_bud/001.mp3'),

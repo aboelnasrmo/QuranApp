@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import 'package:rxdart/rxdart.dart';
-
 import 'package:quranapp/data/classes/position_data.dart';
 import 'package:quranapp/data/play_list/play_list.dart';
-import 'package:quranapp/view/home/widget/audio_progress_bar.dart';
-import 'package:quranapp/view/home/widget/media_meta_data.dart';
+import 'package:quranapp/view/play_surah/widget/audio_progress_bar.dart';
+import 'package:quranapp/view/play_surah/widget/media_meta_data.dart';
+import 'package:rxdart/rxdart.dart';
 
 import '../../controller/controls.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({super.key});
+class PlaySurah extends StatefulWidget {
+  const PlaySurah({super.key});
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<PlaySurah> createState() => _PlaySurahState();
 }
 
-class _HomeViewState extends State<HomeView> with WidgetsBindingObserver {
+class _PlaySurahState extends State<PlaySurah> with WidgetsBindingObserver {
   late AudioPlayer _audioPlayer;
 
   final _playList = PlayList.playList;

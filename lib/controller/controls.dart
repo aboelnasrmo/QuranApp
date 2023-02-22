@@ -75,7 +75,15 @@ class Controls extends StatelessWidget {
                   final processingState = playState?.processingState;
                   final playing = playState?.playing;
                   // if not playing
-                  if (!(playing ?? false)) {
+                  if (processingState == ProcessingState.loading ||
+                      processingState == ProcessingState.buffering) {
+                    return Container(
+                      margin: const EdgeInsets.all(8.0),
+                      width: 64.0,
+                      height: 64.0,
+                      child: const CircularProgressIndicator(),
+                    );
+                  } else if (!(playing ?? false)) {
                     return IconButton(
                       onPressed: audioPlayer.play,
                       color: Colors.white,
