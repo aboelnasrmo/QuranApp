@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:just_audio_background/just_audio_background.dart';
 import 'package:quranapp/core/utlis/router.dart';
 
 // Future<void> main() async {
@@ -13,6 +12,7 @@ import 'package:quranapp/core/utlis/router.dart';
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
